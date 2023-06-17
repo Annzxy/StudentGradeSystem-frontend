@@ -104,7 +104,7 @@ const Semester = () => {
                       to={SEMESTER_Details_URL}
                       state={{ semester_id: semester.id }}
                     >
-                      <Button>Update</Button>
+                      <Button>Detail</Button>
                     </Link>
                   </td>
                 </tr>

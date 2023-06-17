@@ -67,6 +67,8 @@ const Menu = () => {
       <Routes>
         <Route path={HOME_URL} element={<Home />} />
         <Route path={SEMESTER_URL} element={<Semester />} />
+        <Route path={SEMESTER_Details_URL} element={<SemesterDetails />} />
+
         <Route path={COURSE_URL} element={<Home />} />
         <Route path={LECTURER_URL} element={<Home />} />
         <Route path={CLASS_URL} element={<Home />} />
@@ -74,7 +76,6 @@ const Menu = () => {
         <Route path={STUDENT_ENROLLMENT_URL} element={<Home />} />
         <Route path={UPLOAD_DOCUMENT_URL} element={<Home />} />
         <Route path={SEND_EMAIL_URL} element={<Home />} />
-        <Route path={SEMESTER_Details_URL} element={<SemesterDetails />} />
       </Routes>
     </BrowserRouter>
   );
