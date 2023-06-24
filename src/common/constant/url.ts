@@ -4,6 +4,7 @@ export const SEMESTER_URL = "/semester";
 export const SEMESTER_Details_URL = "/semester-detail";
 
 export const COURSE_URL = "/course";
+export const COURSE_Details_URL = "/course-detail";
 
 export const LECTURER_URL = "/lecturer";
 

@@ -14,71 +14,75 @@ import {
   UPLOAD_DOCUMENT_URL,
   SEND_EMAIL_URL,
   SEMESTER_Details_URL,
+  COURSE_Details_URL,
 } from "../../common/constant";
 import Home from "../Home/home";
-import Semester from "../Semester/Semester";
+import Semester from "../Semester";
 import SemesterDetails from "../Semester/component/SemesterDetails";
+import DocumentUploader from "../DocumentUploader";
+import Course from "../Course/Course";
+import CourseDetails from "../Course/CourseDetails";
 
-const Menu = () => {
-  return (
-    <BrowserRouter>
-      <Navbar bg="light" expand="lg">
-        <Navbar.Brand as={Link} to="/">
-          Student Grade Book
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbar-nav" />
-        <Navbar.Collapse id="navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link as={Link} to={HOME_URL}>
-              Home
-            </Nav.Link>
-            <Nav.Link as={Link} to={SEMESTER_URL}>
-              Semester
-            </Nav.Link>
-            <Nav.Link as={Link} to={COURSE_URL}>
-              Course
-            </Nav.Link>
-            <Nav.Link as={Link} to={LECTURER_URL}>
-              Lecturer
-            </Nav.Link>
-            <Nav.Link as={Link} to={CLASS_URL}>
-              Class
-            </Nav.Link>
-            <Nav.Link as={Link} to={STUDENT_URL}>
-              Student
-            </Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item as={Link} to={STUDENT_ENROLLMENT_URL}>
-                Student Enrollment
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to={UPLOAD_DOCUMENT_URL}>
-                Upload Document
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to={SEND_EMAIL_URL}>
-                Send Email
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+const Menu = () => (
+  <BrowserRouter>
+    <Navbar bg="light" expand="lg">
+      <Navbar.Brand as={Link} to="/">
+        Student Grade Book
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="navbar-nav" />
+      <Navbar.Collapse id="navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link as={Link} to={HOME_URL}>
+            Home
+          </Nav.Link>
+          <Nav.Link as={Link} to={SEMESTER_URL}>
+            Semester
+          </Nav.Link>
+          <Nav.Link as={Link} to={COURSE_URL}>
+            Course
+          </Nav.Link>
+          <Nav.Link as={Link} to={LECTURER_URL}>
+            Lecturer
+          </Nav.Link>
+          <Nav.Link as={Link} to={CLASS_URL}>
+            Class
+          </Nav.Link>
+          <Nav.Link as={Link} to={STUDENT_URL}>
+            Student
+          </Nav.Link>
+          <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <NavDropdown.Item as={Link} to={STUDENT_ENROLLMENT_URL}>
+              Student Enrollment
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item as={Link} to={UPLOAD_DOCUMENT_URL}>
+              Upload Document
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item as={Link} to={SEND_EMAIL_URL}>
+              Send Email
+            </NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
 
-      <Routes>
-        <Route path={HOME_URL} element={<Home />} />
-        <Route path={SEMESTER_URL} element={<Semester />} />
-        <Route path={SEMESTER_Details_URL} element={<SemesterDetails />} />
+    <Routes>
+      <Route path={HOME_URL} element={<Home />} />
+      <Route path={SEMESTER_URL} element={<Semester />} />
+      <Route path={SEMESTER_Details_URL} element={<SemesterDetails />} />
 
-        <Route path={COURSE_URL} element={<Home />} />
-        <Route path={LECTURER_URL} element={<Home />} />
-        <Route path={CLASS_URL} element={<Home />} />
-        <Route path={STUDENT_URL} element={<Home />} />
-        <Route path={STUDENT_ENROLLMENT_URL} element={<Home />} />
-        <Route path={UPLOAD_DOCUMENT_URL} element={<Home />} />
-        <Route path={SEND_EMAIL_URL} element={<Home />} />
-      </Routes>
-    </BrowserRouter>
-  );
-};
+      <Route path={COURSE_URL} element={<Course />} />
+      <Route path={COURSE_Details_URL} element={<CourseDetails />} />
+
+      <Route path={LECTURER_URL} element={<Home />} />
+      <Route path={CLASS_URL} element={<Home />} />
+      <Route path={STUDENT_URL} element={<Home />} />
+      <Route path={STUDENT_ENROLLMENT_URL} element={<Home />} />
+      <Route path={UPLOAD_DOCUMENT_URL} element={<DocumentUploader />} />
+      <Route path={SEND_EMAIL_URL} element={<Home />} />
+    </Routes>
+  </BrowserRouter>
+);
 
 export default Menu;

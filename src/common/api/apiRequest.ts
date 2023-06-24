@@ -21,7 +21,6 @@ export const apiRequest = async <T>(
 
     const updatedConfig = omitBy(config, isNil);
 
-    console.log("updatedConfig", updatedConfig);
     const { data } = await axios.request<T>(updatedConfig);
 
     return data;

@@ -7,3 +7,10 @@ export interface SemesterType {
   year: number;
   id: number;
 }
+
+export interface CourseType {
+  course_code: string;
+  course_name: string;
+  semesters: number[];
+  id: number;
+}
