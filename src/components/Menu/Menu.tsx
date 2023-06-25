@@ -17,6 +17,8 @@ import {
   LECTURER_Details_URL,
   CLASSROOM_URL,
   CLASSROOM_Details_URL,
+  STUDENT_Details_URL,
+  STUDENT_ENROLLMENT_Details_URL,
 } from "../../common/constant";
 import Home from "../Home/home";
 import Semester from "../Semester";
@@ -28,6 +30,10 @@ import Lecturer from "../Lecturer/Lecturer";
 import LecturerDetails from "../Lecturer/LecturerDetails";
 import Classroom from "../Classroom/Classroom";
 import ClassroomDetails from "../Classroom/ClassroomDetails";
+import StudentDetails from "../Student/StudentDetails";
+import Student from "../Student/Student";
+import StudentEnrollment from "../StudentEnrollment/StudentEnrollment";
+import StudentEnrollmentDetails from "../StudentEnrollment/StudentEnrollmentDetails";
 
 const Menu = () => (
   <BrowserRouter>
@@ -87,8 +93,15 @@ const Menu = () => (
       <Route path={CLASSROOM_URL} element={<Classroom />} />
       <Route path={CLASSROOM_Details_URL} element={<ClassroomDetails />} />
 
-      <Route path={STUDENT_URL} element={<Home />} />
-      <Route path={STUDENT_ENROLLMENT_URL} element={<Home />} />
+      <Route path={STUDENT_URL} element={<Student />} />
+      <Route path={STUDENT_Details_URL} element={<StudentDetails />} />
+
+      <Route path={STUDENT_ENROLLMENT_URL} element={<StudentEnrollment />} />
+      <Route
+        path={STUDENT_ENROLLMENT_Details_URL}
+        element={<StudentEnrollmentDetails />}
+      />
+
       <Route path={UPLOAD_DOCUMENT_URL} element={<DocumentUploader />} />
       <Route path={SEND_EMAIL_URL} element={<Home />} />
     </Routes>

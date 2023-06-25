@@ -33,3 +33,22 @@ export interface ClassroomType {
   lecturer: string;
   id: number;
 }
+
+export interface StudentType {
+  user: string;
+  student_ID: string;
+  first_name: string;
+  last_name: string;
+  email: string;
+  dob: string;
+  id: number;
+}
+
+export interface StudentEnrollmentType {
+  student_ID: string;
+  class_enrolled: string;
+  grade: string;
+  enroll_time: string;
+  grade_time: string;
+  id: number;
+}
