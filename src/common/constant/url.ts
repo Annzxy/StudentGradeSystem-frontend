@@ -7,8 +7,10 @@ export const COURSE_URL = "/course";
 export const COURSE_Details_URL = "/course-detail";
 
 export const LECTURER_URL = "/lecturer";
+export const LECTURER_Details_URL = "/lecturer-detail";
 
-export const CLASS_URL = "/class";
+export const CLASSROOM_URL = "/classroom";
+export const CLASSROOM_Details_URL = "/classroom-detail";
 
 export const STUDENT_URL = "/student";
 

@@ -4,7 +4,6 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import {
-  CLASS_URL,
   COURSE_URL,
   HOME_URL,
   LECTURER_URL,
@@ -15,6 +14,9 @@ import {
   SEND_EMAIL_URL,
   SEMESTER_Details_URL,
   COURSE_Details_URL,
+  LECTURER_Details_URL,
+  CLASSROOM_URL,
+  CLASSROOM_Details_URL,
 } from "../../common/constant";
 import Home from "../Home/home";
 import Semester from "../Semester";
@@ -22,6 +24,10 @@ import SemesterDetails from "../Semester/component/SemesterDetails";
 import DocumentUploader from "../DocumentUploader";
 import Course from "../Course/Course";
 import CourseDetails from "../Course/CourseDetails";
+import Lecturer from "../Lecturer/Lecturer";
+import LecturerDetails from "../Lecturer/LecturerDetails";
+import Classroom from "../Classroom/Classroom";
+import ClassroomDetails from "../Classroom/ClassroomDetails";
 
 const Menu = () => (
   <BrowserRouter>
@@ -44,7 +50,7 @@ const Menu = () => (
           <Nav.Link as={Link} to={LECTURER_URL}>
             Lecturer
           </Nav.Link>
-          <Nav.Link as={Link} to={CLASS_URL}>
+          <Nav.Link as={Link} to={CLASSROOM_URL}>
             Class
           </Nav.Link>
           <Nav.Link as={Link} to={STUDENT_URL}>
@@ -75,8 +81,12 @@ const Menu = () => (
       <Route path={COURSE_URL} element={<Course />} />
       <Route path={COURSE_Details_URL} element={<CourseDetails />} />
 
-      <Route path={LECTURER_URL} element={<Home />} />
-      <Route path={CLASS_URL} element={<Home />} />
+      <Route path={LECTURER_URL} element={<Lecturer />} />
+      <Route path={LECTURER_Details_URL} element={<LecturerDetails />} />
+
+      <Route path={CLASSROOM_URL} element={<Classroom />} />
+      <Route path={CLASSROOM_Details_URL} element={<ClassroomDetails />} />
+
       <Route path={STUDENT_URL} element={<Home />} />
       <Route path={STUDENT_ENROLLMENT_URL} element={<Home />} />
       <Route path={UPLOAD_DOCUMENT_URL} element={<DocumentUploader />} />

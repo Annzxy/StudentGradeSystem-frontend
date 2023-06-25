@@ -14,3 +14,22 @@ export interface CourseType {
   semesters: number[];
   id: number;
 }
+
+export interface LecturerType {
+  user: string;
+  staff_ID: string;
+  first_name: string;
+  last_name: string;
+  email: string;
+  courses: string;
+  dob: string;
+  id: number;
+}
+
+export interface ClassroomType {
+  classroom_number: string;
+  semester: string;
+  course: string;
+  lecturer: string;
+  id: number;
+}

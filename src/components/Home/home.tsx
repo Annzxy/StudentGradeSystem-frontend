@@ -3,7 +3,7 @@ import React from "react";
 const Home = () => {
   return (
     <div>
-      <p>Welcome to student grade system</p>
+      <p>Welcome to Student Grade System</p>
     </div>
   );
 };
